@@ -1,10 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-* {
+*
+{
     padding: 0;
     margin: 0;
     border: none;
+    box-sizing: border-box;
 }
 
 body
@@ -16,33 +18,76 @@ body
     font-family: 'Consolas', sans-serif;
 }
 
-.code
+pre
 {
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    border: #000000 solid 2px;
+    background-color: #1a1a1a;
+    color: #f7f7f7;
 }
 
-.navbar
+header
 {
     height: 10vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    position: sticky;
+    margin-inline: auto;
+    align-items: center;
+    z-index: 999;
+    background-color: #f7f7f7;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.buffer
-{
-    padding: 5vh;
-}
-
-main
-{
-    background-color: #FFFFFF;
-    height: auto;
-}
-
-.main-logo
+header .main-logo
 {
     height: 30px;
     margin-bottom: 10px;
 }
+
+header .navbar ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+} 
+
+header .navbar ul li
+{
+    list-style-type: none;
+}
+
+header .navbar ul li a
+{
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    margin-left: 1rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+header .navbar ul li:hover a
+{
+    background-color: #4C02F1;
+    color: white;
+}
+
+.buffer
+{
+    height: 5vh;
+}
+
+main
+{
+    background-color: #f7f7f7;
+    height: auto;
+}
+
 
 h1
 {
@@ -50,6 +95,29 @@ h1
     font-size: 60px;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+h3
+{
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.main-text h3
+{
+    color: #FFFFFF;
+}
+
+.top .main-text h1
+{
+    color: #FFFFFF;
+}
+
+.section-row h1
+{
+    color: #1a1a1a;
 }
 
 .container-fluid
@@ -69,10 +137,15 @@ h1
     align-items: center;
 }
 
-.background-image-front
+.section-title
 {
-    width: 30%;
-    object-fit: contain;
+    height: auto;
+    padding: 100px;
+}
+
+.top .background-gradient img
+{
+    width: 300px;
 }
 
 .main-text
@@ -80,19 +153,14 @@ h1
     width: 50%;
 }
 
-.main-text h1
-{
-    color: #FFFFFF;
-}
-
-.section-row
+section .section-row
 {
     position: relative;
     display: flex;
     margin: 35px 0;
     padding: 30px 0px;
-    left: 25%;
-    width: 50%;
+    left: 15%;
+    width: 70%;
     height: auto;
     align-items: center;
     justify-content: space-evenly;
@@ -102,7 +170,83 @@ h1
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-#pascal h1
+.bab
 {
-    color: #1a1a1a;
+    position: relative;
+    margin: 35px;
+    padding: 30px;
+    left: 25%;
+    width: 50%;
+    height: auto;
+    background-color: #f7f7f7;
+    border: #1a1a1a solid 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bab h1
+{
+    font-size: 50px;
+}
+.bab h3
+{
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-top: 20px;
+}
+
+.bab h4
+{
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px)
+{
+    header.navbar-container
+    {
+        height: auto;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    
+    header.navbar-container .nav-list ul
+    {
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    h1
+    {
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 2px;
+    }
+
+    .top .background-gradient
+    {
+        flex-direction: column;
+        
+    }
+
+    .top .background-gradient img
+    {
+        order: -1;
+    }
+
+    section .section-row
+    {
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    section .section-row h1
+    {
+        margin-bottom: 1.75rem;
+    }
 }

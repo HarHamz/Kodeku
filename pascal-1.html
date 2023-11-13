@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodeku</title>
+    <link rel="icon" href="img/logo_only.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- TODO: UPDATE FINISHED Header -->
+    <header>
+        
+    </header>
+
+    <div class="buffer"></div>
+
+    <!-- Main -->
+    <main>
+        <!-- Background Article -->
+        <article class="container-fluid top">
+            <div class="background-gradient section-title">
+                <div class="main-text">
+                    <h3>Pascal</h3>
+                    <h1>Bab 1: Pengenalan</h1>
+                </div>
+            </div>
+        </article>
+
+        <!-- Section Bab -->
+        <section class="container-fluid bab" id="P-1-1">
+            <h1>Sejarah</h1>
+            <p>
+                Bahasa pemrograman Pascal dikembangkan oleh Niklaus Wirth pada tahun 1970
+                dengan tujuan untuk mengajarkan konsep dasar pemrograman komputer kepada
+                mahasiswa di Swiss Federal Institute of Technology. Wirth ingin menciptakan
+                bahasa yang sederhana, mudah dipahami, dan dapat diterapkan dalam berbagai jenis proyek.
+                Nama "Pascal" diambil dari nama matematikawan terkenal asal Prancis, Blaise Pascal.
+            </p>
+            <p>
+                Pada awalnya dirilis pada tahun 1971, Pascal berfungsi sebagai bahasa pemrograman
+                untuk sistem operasi P-system, yang dikembangkan oleh Universitas California, Berkeley.
+                P-system menggunakan Pascal sebagai bahasa pemrograman utamanya dan menyediakan beragam alat
+                untuk pengembangan aplikasi. Selain itu, Pascal digunakan dalam pembuatan sistem operasi lainnya.
+            </p>
+            <p>
+                Pascal menjadi populer di kalangan akademisi maupun profesional karena kesederhanaannya
+                dan struktur yang terdefinisi dengan baik. Bahasa ini diakui karena kualitasnya dalam
+                pemrograman terstruktur dan pengembangan aplikasi yang efisien.
+            </p>
+        </section>
+        <section class="container-fluid bab" id="P-1-2">
+            <h1>Fitur</h1>
+            <p>
+                Beberapa fitur utama dari bahasa pemrograman Pascal yang membuatnya cocok untuk digunakan
+                sebagai alat pembelajaran dan pengembangan aplikasi komersial meliputi:
+            </p>
+            <h3>1. Tipe Data Umum</h3>
+            <p>
+                Pascal memiliki tipe data yang umum digunakan dalam bahasa pemrograman komputer lain seperti 
+                <i>real</i>, <i>integer</i>, <i>character</i>, dan <i>boolean</i>. Tipe data ini dikenal sebagai tipe data bawaan dalam Pascal.
+            </p>
+            <h3>2. Tipe Data Bentukan</h3>
+            <p>
+                Pascal menyediakan fitur untuk membuat tipe data yang ditentukan oleh programmer sendiri, yang disebut tipe data bentukan.
+                Hal ini memungkinkan programmer membuat tipe data yang sesuai dengan kebutuhan aplikasi yang akan dibuat.
+            </p>
+            <h3>3. Struktur Data</h3>
+            <p>Pascal menyediakan berbagai macam struktur data seperti file, set, array, dan record yang
+                memungkinkan programmer untuk menyimpan dan mengelola data dengan lebih efisien.
+                Hal ini sangat membantu dalam menyelesaikan berbagai jenis masalah yang mungkin dihadapi
+                dalam pengembangan aplikasi.
+            </p>
+            <h3>4. Aturan Tipe Data yang Ketat</h3>
+            <p>
+                Pascal memiliki aturan tipe data yang cukup ketat, sehingga programmer harus menentukan
+                tipe data dari variabel yang digunakan dan tidak boleh digunakan untuk tipe data lain.
+                Pengguna juga harus mendeklarasikan variabel terlebih dahulu sebelum digunakan dalam program.
+            </p>
+            <h3>5. Mendukung <i>Structural Programming</i></h3>
+            <p>
+                Pascal telah mendukung metode pemrograman struktural yang memungkinkan untuk memisahkan kode
+                program menjadi bagian-bagian yang lebih kecil dan terorganisir dengan baik melalui penggunaan
+                prosedur dan fungsi. Hal ini membuat kode program lebih mudah dibaca, dipahami,
+                dan diubah sesuai kebutuhan.
+            </p>
+            <h3>6. Sintaks yang Sederhana</h3>
+            <p>
+                Pascal memiliki sintaks yang sederhana dan ekspresif, sehingga program yang ditulis dalam
+                bahasa ini mudah dipahami dan diuraikan. Perintah yang digunakan dalam bahasa ini menggunakan
+                Bahasa Inggris yang sederhana, sehingga mudah untuk dipelajari dan digunakan.
+            </p>
+        </section>
+        <section class="container-fluid bab" id="P-1-3">
+            <h1>Struktur Program</h1>
+            <pre><code>
+                program &lt;judul program&gt;
+                uses &lt;daftar unit&gt;
+
+                &lt;bagian deklarasi&gt;
+
+                begin
+                &lt;statemen-statemen&gt;
+                end.
+            </code></pre>
+            <h3>&lt;judul program&gt;</h3>
+            <p>Biasanya sama dengan nama program.</p>
+            <h3>&lt;daftar unit&gt;</h3>
+            <p>Berisi unit-unit yang akan digunakan. Jika lebih dari 1 maka dipisahkan dengan tanda koma (,).</p>
+            <h3>&lt;bagian deklarasi&gt;</h3>
+            <p>
+                Berisi deklarasi-deklarasi yang dibutuhkan program, yang meliputi:
+                <ul>
+                    <li>Tipe Data</li>
+                    <li>Konstanta</li>
+                    <li>Variabel</li>
+                    <li>Prosedur</li>
+                    <li>Fungsi</li>
+                    <li>Label</li>
+                </ul>
+            </p>
+            <h3>&lt;statemen-statemen&gt;</h3>
+            <p>
+                merupakan perintah-perintah yang akan dituliskan. Statemen- statemen ini harus berada di dalam blok begin-end.
+                Berikut ini contoh penulisan statemen-statemen di dalam program.
+            </p>
+        </section>
+    </main>
+
+
+    <!-- TODO: UPDATE FINISHED Footer -->
+    <footer>
+        INI FOOTER
+    </footer>
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
