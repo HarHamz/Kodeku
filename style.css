@@ -77,6 +77,12 @@ header .navbar ul li:hover a
     color: white;
 }
 
+header .logsign
+{
+    margin-left: auto;
+    padding-right: 2rem;
+}
+
 .buffer
 {
     height: 5vh;
