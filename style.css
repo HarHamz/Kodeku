@@ -41,7 +41,7 @@ header
 
 header .main-logo
 {
-    height: 30px;
+    height: 2rem;
     margin-bottom: 10px;
 }
 
@@ -210,6 +210,63 @@ section .section-row
     font-weight: bold;
     letter-spacing: 0;
     margin-top: 20px;
+}
+
+footer
+{
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: sticky;
+    margin-inline: auto;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 999;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer .main-logo
+{
+    height: 8rem;
+}
+
+footer .navbar
+{
+    margin: 0;
+    padding: 0;
+}
+footer .navbar ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem 1rem;
+} 
+
+footer .navbar ul li
+{
+    list-style-type: none;
+}
+
+footer .navbar ul li a
+{
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+footer .navbar ul li:hover a
+{
+    background-color: #4C02F1;
+    color: white;
 }
 
 @media screen and (max-width: 768px)

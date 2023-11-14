@@ -11,12 +11,21 @@
 </head>
 
 <body>
-    <!-- TODO: UPDATE FINISHED Header -->
-    <header>
-        
+    <!-- Header -->
+    <header class="navbar-container">
+        <a class="navbar-brand px-3" href="index.html"><img src="img/logo_sekunder.png" alt="Logo" class="main-logo"></a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <ul>
+                <li>
+                    <a class="nav-link" href="#pascal">Pascal</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logsign">
+            <a class="btn btn-primary" href="login.html" role="button">Log In</a>
+            <a class="btn btn-primary" href="signup.html" role="button">Sign Up</a>
+        </div>
     </header>
-
-    <div class="buffer"></div>
 
     <!-- Main -->
     <main>
@@ -30,7 +39,7 @@
             </div>
         </article>
 
-        <!-- Section Bab -->
+        <!-- Sejarah -->
         <section class="container-fluid bab" id="P-1-1">
             <h1>Sejarah</h1>
             <p>
@@ -52,6 +61,8 @@
                 pemrograman terstruktur dan pengembangan aplikasi yang efisien.
             </p>
         </section>
+
+        <!-- Fitur -->
         <section class="container-fluid bab" id="P-1-2">
             <h1>Fitur</h1>
             <p>
@@ -94,6 +105,8 @@
                 Bahasa Inggris yang sederhana, sehingga mudah untuk dipelajari dan digunakan.
             </p>
         </section>
+
+        <!-- Struktur Program -->
         <section class="container-fluid bab" id="P-1-3">
             <h1>Struktur Program</h1>
             <pre><code>
@@ -128,12 +141,50 @@
                 Berikut ini contoh penulisan statemen-statemen di dalam program.
             </p>
         </section>
+
+        <!-- Prosedur Write dan Read -->
+        <section class="container-fluid bab" id="P-1-4">
+            <h1>Prosedur Write dan Read</h1>
+            <p>Dalam pembuatan program tentunya akan melakukan banyak penulisan (output) dan pembacaan (input) data.
+                Dalam bahasa Pascal, prosedur yang digunakan untuk melakukan penulisan adalah Write,
+                sedangkan untuk melakukan pembacaan adalah Read. Prosedur Write dan Read kadang kala diakhiri dengan
+                ln (singkatan dari line) menjadi Writeln dan Readln yang berguna untuk memindahkan kursor ke baris baru
+                di bawahnya setelah program melakukan proses input ataupun output. Prosedur Read juga bisa diakhiri dengan
+                key menjadi Readkey yang berfungsi untuk membaca sebuah karakter. Prosedur Readln dan Readkey juga digunakan
+                di akhir program agar hasil dari program dapat dilihat.</p>
+        </section>
+
+        <!-- Komentar Program -->
+        <section class="container-fluid bab" id="P-1-5">
+            <h1>Komentar Program</h1>
+            <p>Ada dua macam cara untuk membuat komentar program pada bahasa Pascal:<br><br>
+                - Menggunakan tanda (*…*)atau {…}<br>
+                Digunakan untuk menuliskan komentar yang banyaknya lebih dari satu baris.<br>
+                - Menggunakan tanda //…<br>
+                Digunakan untuk menuliskan satu baris komentar.</p>
+            <p>Contoh:</p>
+            <pre><code>
+                begin // ini komentar 1 baris di kanan sintaks program
+                clrscr;
+                {ini komentar 2 baris, yang berada di dalam kurung kurawal}
+                writeln('S-1 Ilmu Komputer USU');
+                end.
+            </code></pre>
+        </section>
     </main>
 
 
-    <!-- TODO: UPDATE FINISHED Footer -->
+    <!-- Footer -->
     <footer>
-        INI FOOTER
+        &copy; 2023 - Kodeku
+        <a class="navbar-brand px-3" href="index.html"><img src="img/logo_primer.png" alt="Logo" class="main-logo"></a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">   
+            <ul>
+                <li><a class="nav-link" href="#">Beranda</a></li>
+                <li><a class="nav-link" href="#">Kontak</a></li>
+                <li><a class="nav-link" href="#">Tentang</a></li>
+            </ul>
+        </nav>
     </footer>
 
 
