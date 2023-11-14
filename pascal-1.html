@@ -171,8 +171,131 @@
                 end.
             </code></pre>
         </section>
-    </main>
 
+        <!-- Variabel -->
+        <section class="container-fluid bab" id="P-1-6">
+            <h1>Variabel</h1>
+            <p>Adalah suatu pengenal yang didefinisikan oleh programmer untuk menyimpan nilai atau
+                data tertentu yang dibutuhkan dalam program pada saat program sedang berjalan (run time). <br>
+                Bentuk umum pendeklarasian variabel:</p>
+            <pre><code>
+                var
+                NamaVariabel : tipe_data;
+            </code></pre>
+            <pre><code>
+                var
+                x    : integer;
+                nama : string[25];
+            </code></pre>
+        </section>
+
+        <!-- Konstanta -->
+        <section class="container-fluid bab" id="P-1-7">
+            <h1>Konstanta</h1>
+            <p>Konstanta adalah variabel yang bernilai tetap selama program berjalan. Bentuk umum konstanta:</p>
+            <pre><code>
+                const
+                    NamaKonstanta1 : nilaiKonstanta1;
+                    NamaKonstanta2 : nilaiKonstanta2;
+            </code></pre>
+        </section>
+
+        <!-- Tipe Data -->
+        <section class="container-fluid bab" id="P-1-8">
+            <h1>Tipe Data</h1>
+            <h3>Bilangan Bulat</h3>
+            <p>Berikut ini tipe data yang termasuk ke dalam tipe bilangan bulat di dalam bahasa Pascal:</p>
+            <table class="table table-striped">
+                <tr>
+                    <th>Tipe Data</th>
+                    <th>Penjelasan</th>
+                    <th>Alokasi Memori</th>
+                </tr>
+                <tr>
+                    <td>Shortint</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari -128 hingga 127</td>
+                    <td>(1 byte)</td>
+                </tr>
+                <tr>
+                    <td>Integer</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari -32768 hingga 32767</td>
+                    <td>(2 byte)</td>
+                </tr>
+                <tr>
+                    <td>LongInt</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari -2147483648 hingga 2147383647</td>
+                    <td>(4 byte)</td>
+                </tr>
+                <tr>
+                    <td>Byte</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari 0 hingga 255</td>
+                    <td>(1 byte)</td>
+                </tr>
+                <tr>
+                    <td>Word</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari 0 hingga 65535</td>
+                    <td>(2 byte)</td>
+                </tr>
+            </table>
+
+            <h3>Bilangan Riil</h3>
+            <p>Adalah bilangan yang mengandung angka di belakang koma. Tipe data yang termasuk ke dalam tipe bilangan riil:</p>
+            <table class="table table-striped">
+                <tr>
+                    <th>Tipe Data</th>
+                    <th>Jangkauan Nilai</th>
+                </tr>
+                <tr>
+                    <td>Real</td>
+                    <td>2.9 &times; 10<sup>-39</sup> sampai 1.7 &times; 10<sup>38</sup></td>
+                </tr>
+                <tr>
+                    <td>Single</td>
+                    <td>1.5 &times; 10<sup>-45</sup> sampai 3.4 &times; 10<sup>38</sup></td>
+                </tr>
+                <tr>
+                    <td>Double</td>
+                    <td>5.0 &times; 10<sup>-324</sup> sampai 1.7 &times; 10<sup>308</sup></td>
+                </tr>
+                <tr>
+                    <td>Extended</td>
+                    <td>3.4 &times; 10<sup>-4932</sup> sampai 1.7 &times; 1.1<sup>4932</sup></td>
+                </tr>
+                <tr>
+                    <td>Double</td>
+                    <td>-9.2 &times; 10<sup>-18</sup> sampai 9.2 &times; 10<sup>18</sup></td>
+                </tr>
+            </table>
+
+            <h3>Karakter</h3>
+            <p>Tipe ini direpresentasikan dengan menggunakan tipe data char. Berguna untuk merepresentasikan nilai-nilai karakter seperti 'A','B','C','D','E'.</p>
+            
+            <h3>String</h3>
+            <p>Tipe ini direpresentasikan dengan menggunakan tipe data string. String merupakan kumpulan dari karakter yang terangkai menjadi satu kata ataupun kalimat, misalnya 'Hello, world!'.</p>
+        
+            <h3>Tipe Logika</h3>
+            <p>Tipe yang hanya memiliki dua buah nilai yaitu true dan false. Pascal menyediakan tipe khusus untuk mendefinisikan data-data logic tersebut, yaitu tipe data Boolean.</p>
+        </section>
+
+        <!-- Penulisan Identifier -->
+        <section class="container-fluid bab" id="P-1-9">
+            <h1>Penulisan Identifier</h1>
+            <p>Identifier merupakan suatu nama yang digunakan sebagai pengenal dari suatu variabel, fungsi, konstanta, struct, objek dan sebagainya. Penulisan identifier yang sah harus mengikuti aturan berikut:</p>
+            <ol>
+                <li>Gabungan dari huruf-huruf. Contoh: nama, saya, aku, satu dan sebagainya.</li>
+                <li>Gabungan dari huruf dan angka dimana harus diawali dengan huruf terlebih dahulu.
+                    Contoh : N01,  N4ma, Say4, s4t0 dan sebagainya.</li>
+                <li>Dimulai dengan tanda underscore. Contoh: _aku, _kamu, _dia, _1satu.</li>
+                <li>Apabila lebih dari satu kata digunakan tanda underscore. Contoh: saya_makan, aku_cinta_dia, fungsi_satu, konstanta_1 dan sebagainya.</li>
+                <li>Tidak berupa sintaks/prosedur bawaan dari Pascal. Contoh: write, read, for, case, if, dll.</li>
+            </ol>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
