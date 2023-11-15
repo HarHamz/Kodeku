@@ -38,11 +38,177 @@
                 </div>
             </div>
         </article>
-
-        <!-- nama subbab -->
+    
+        <!-- Jenis Operator -->
         <section class="container-fluid bab" id="P-2-1">
-            
+            <h1>Jenis Operator</h1>
+            <p>
+                Tanda operasi (operator) dalam Pascal dikelompokkan menjadi 9 kategori:
+            </p>
+            <h3>1. Assignment Operator</h3>
+            <p>
+                <i>Assignment Operator</i> digunakan untuk memberi nilai.
+                Operator ini menggunakan simbol titik dua diikuti oleh tanda sama dengan (:=)
+                <br>Contoh: A := B;
+            </p>
+            <h3>2. Binary Operator</h3>
+            <p>
+                <i>Binary Operator</i> digunakan untuk mengoperasikan dua buah operand.
+                Operand dapat berbentuk konstanta/variabel.
+                Operator ini digunakan untuk operasi aritmatika yang berhubungan dengan nilai tipe data integer dan <i>floating point</i>.
+                <table class="table table-striped" style="width: 400px">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Operasi</th>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Perkalian</td>
+                    </tr>
+                    <tr>
+                        <td>div</td>
+                        <td>Pembagian bulat</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Pembagian real</td>
+                    </tr>
+                    <tr>
+                        <td>mod</td>
+                        <td>Modulus</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Penjumlahan</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Pengurangan</td>
+                    </tr>
+                </table>
+            </p>
+            <h3>3. Unary Operator</h3>
+            <p>
+                <i>Unary Operator</i> hanya menggunakan satu operand saja.
+                Operand dapat berbentuk konstanta atau variabel.
+                <i>Unary Operator</i> dapat berupa <i>unary</i> plus (+) atau minus (-).
+            </p>
+            <h3>4. Bitwise Operator</h3>
+            <p>
+                <i>Bitwise Operator</i> digunakan untuk operasi bit per bit pada integer.
+                Operasi yang dapat digunakan: <b>NOT, AND, OR, XOR, SHL, dan SHR</b>.
+                <table class="table table-striped" style="width: 400px">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Operasi</th>
+                    </tr>
+                    <tr>
+                        <td>NOT</td>
+                        <td>Bitwise negation</td>
+                    </tr>
+                    <tr>
+                        <td>AND</td>
+                        <td>Bitwise and</td>
+                    </tr>
+                    <tr>
+                        <td>OR</td>
+                        <td>Bitwise or</td>
+                    </tr>
+                    <tr>
+                        <td>XOR</td>
+                        <td>Bitwise xor</td>
+                    </tr>
+                    <tr>
+                        <td>SHL</td>
+                        <td>Shift left</td>
+                    </tr>
+                    <tr>
+                        <td>SHR</td>
+                        <td>Shift right</td>
+                    </tr>
+                </table>
+            </p>
+            <h3>5. Relational Operator</h3>
+            <p>
+                <i>Relational Operator</i> digunakan untuk membandingkan hubungan antara dua buah
+                operand dan menghasilkan tipe boolean, yaitu <i>true</i> atau <i>false</i>.
+                <table class="table table-striped" style="width: 400px">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Operasi</th>
+                    </tr>
+                    <tr>
+                        <td>=</td>
+                        <td>Sama dengan</td>
+                    </tr>
+                    <tr>
+                        <td><></td>
+                        <td>Tidak sama dengan</td>
+                    </tr>
+                    <tr>
+                        <td>></td>
+                        <td>Lebih besar dari</td>
+                    </tr>
+                    <tr>
+                        <td>>=</td>
+                        <td>Lebih besar sama dengan</td>
+                    </tr>
+                    <tr>
+                        <td><</td>
+                        <td>Lebih kecil dari</td>
+                    </tr>
+                    <tr>
+                        <td><=</td>
+                        <td>Lebih kecil sama dengan</td>
+                    </tr>
+                    <tr>
+                        <td>IN</td>
+                        <td>Seleksi dari anggota</td>
+                    </tr>
+                </table>
+            </p>
+            <h3>6. Logical Operator</h3>
+            <p>
+                <i>Logical Operator</i> memiliki empat operasi, yaitu: <b>NOT, AND, OR, XOR</b>.
+                Bentuk operator tersebut sama dengan <i>Bitwise Operator</i>, tapi penggunaannya tidak sama.
+                Operator ini bekerja dengan nilai-nilai logika true dan false.
+            </p>
+            <h3>7. Address Operator</h3>
+            <p>
+                <i>Address Operator</i> khusus berhubungan dengan alamat di memori, yaitu
+                <i>adress of operator</i> (@) dan <i>indirection operator</i> (^).
+                Operator @ akan menghasilkan alamat dari suatu variabel.
+                Operator ^ akan memberikan nilai dari alamat yang ditunjukkan.
+            </p>
+            <h3>8. Set Operator</h3>
+            <p>
+                <i>Set Operator</i> digunakan untuk operasi himpunan.
+                <table class="table table-striped" style="width: 300px">
+                    <tr>
+                        <th>Operator</th>
+                        <th>Operasi</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Union / Sum</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Set difference</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Intersection</td>
+                    </tr>
+                </table>
+            </p>
+            <h3>9. String Operator</h3>
+            <p>
+                <i>String Operator</i> digunakan untuk operasi yang berkaitan dengan string.
+                Hanya ada satu operator string saja, yaitu operator (+) yang digunakan untuk menggabungkan string.
+            </p>
         </section>
+    </main>
 
         
     <!-- Footer -->
