@@ -12,6 +12,8 @@
 body
 {
     overflow-x: hidden;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-color: #f7f7f7;
@@ -156,7 +158,8 @@ h3
 
 .main-text
 {
-    width: 50%;
+    width: 60%;
+    align-items: center;
 }
 
 section .section-row
@@ -216,9 +219,11 @@ footer
 {
     height: auto;
     width: 100%;
+    left: 0;
+    bottom: 0;
     display: flex;
+    position: relative;
     justify-content: space-around;
-    position: sticky;
     margin-inline: auto;
     align-items: center;
     padding: 1rem 3rem;
@@ -271,6 +276,11 @@ footer .navbar ul li:hover a
 
 @media screen and (max-width: 768px)
 {
+    header
+    {
+        position: static;
+    }
+
     header.navbar-container
     {
         height: auto;
@@ -287,8 +297,11 @@ footer .navbar ul li:hover a
     h1
     {
         font-size: 40px;
-        font-weight: bold;
-        letter-spacing: 2px;
+    }
+
+    .main-text
+    {
+        min-width: 70%;
     }
 
     .top .background-gradient
@@ -311,5 +324,29 @@ footer .navbar ul li:hover a
     section .section-row h1
     {
         margin-bottom: 1.75rem;
+    }
+
+    footer
+    {
+        height: auto;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    footer .navbar-brand
+    {
+        order: -2;
+        padding: 2rem 0;
+    }
+
+    footer nav
+    {
+        order: -1;
+    }
+
+    footer .navbar ul
+    {
+        flex-direction: row;
+        padding-bottom: 2rem;
     }
 }
