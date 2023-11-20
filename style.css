@@ -162,6 +162,11 @@ h3
     align-items: center;
 }
 
+form
+{
+    width: 80%;
+}
+
 section .section-row
 {
     position: relative;
