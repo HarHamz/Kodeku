@@ -39,11 +39,113 @@
             </div>
         </article>
 
-        <!-- nama subbab -->
-        <section class="container-fluid bab" id="P-2-1">
-            
+        <!-- Teori -->
+        <section class="container-fluid bab" id="P-3-1">
+            <h1>Teori</h1>
+            <p>
+                Operasi kondisi adalah proses menjalankan suatu perintah pada program dengan output yang berbeda sesuai
+                dengan hasil dari kondisi-kondisi. Output akan ditampilkan apabila kondisi yang ditetapkan terpenuhi (true),
+                atau akan menghasilkan output yang berbeda saat kondisi tidak terpenuhi (false) atau langsung keluar dari
+                blok operasi.
+            </p>
         </section>
-
+        <!-- Statemen If -->
+        <section class="container-fluid bab" id="P-3-2">
+            <h1>Statement If</h1>
+            <p>
+                Statement if akan diikuti oleh kondisi yang akan diperiksa, dan disusul oleh kata kunci then.
+                Setelah kata kunci then, tulis perintah yang akan dijalankan jika hasil kondisi yang diperiksa sebelumnya bernilai 1 (true).
+            </p>
+            <h3>1. Statement if Satu Kasus</h3>
+            <p>
+                Statement if satu kasus berarti perintah akan dijalankan hanya jika kondisi yang diperiksa sebelumnya bernilai benar.
+                Apabila kondisi yang diperiksa bernilai salah, maka perintah tidak akan dijalankan.
+            </p>
+            <p>
+                Bentuk umumnya adalah:
+            </p>
+            <pre><code>
+                if (kondisi yang diperiksa) then
+                    perintah yang dijalankan;
+            </code></pre>
+            <h3>2. Statement if Dua Kasus</h3>
+            <p>
+                Jika di bentuk sebelumnya output hanya akan ditampilkan jika kondisi yang diperiksa bernilai benar,
+                di statement if dua kasus, program akan memeriksa kondisi dan akan menampilkan output apabila hasil
+                pemeriksaan kondisi bernilai benar atau salah.
+            </p>
+            <p>
+                Bentuk umumnya adalah:
+            </p>
+            <pre><code>
+                if (kondisi) then
+                    perintah yang dijalankan jika kondisi terpenuhi/TRUE
+                else
+                    perintah yang dijalankan jika kondisi tidak terpenuhi/FALSE;
+            </code></pre>
+            <p>Bentuk di atas berlaku jika statemen di setiap kondisi hanya satu baris saja, jika lebih dari satu baris maka:</p>
+            <pre><code>
+                if (kondisi) then
+                begin
+                    perintah_1;
+                    ...
+                    perintah_x;
+                end
+                else
+                begin
+                    perintah_y;
+                end;
+            </code></pre>
+            <p>
+                Perlu diingat, jika ada perintah sebelum else, perintah end tersebut TIDAK BOLEH diakhiri dengan titik koma (;).
+                Misalnya pada bentuk umum pertama, sebelum else (...terpenuhi/TRUE) tidak ada tanda titik koma (;),
+                sama juga pada bentuk umum yang kedua, perintah end di dalam if tidak ada titik koma (;)
+                karena program masih dilanjutkan oleh else.
+            </p>
+            <h3>3. Statement if Tiga Kasus atau Lebih</h3>
+            <p>
+                Bentuk ini akan menguji lebih dari satu kondisi, dan akan menampilkan perintah yang berbeda-beda tergantung kondisi mana yang terpenuhi.
+            </p>
+            <pre><code>
+                if (kondisi_1) then
+                begin
+                    perintah_jika_kondisi_1_benar;
+                    ...
+                end
+                else if (kondisi_2) then
+                begin
+                    perintah_jika_kondisi_2_benar;
+                    ...
+                end
+                else
+                begin
+                    perintah; 
+                end;
+            </code></pre>
+        </section>
+        <!-- Statemen Case -->
+        <section class="container-fluid bab" id="P-3-2">
+            <h1>Statement Case</h1>
+            <p>
+                Apabila kondisi yang didefinisikan di dalam statement if semakin banyak,
+                maka hal tersebut tentu akan menjadi hal yang cukup kompleks.
+                Oleh karena itu, bahasa Pascal menyediakan alternatif lain untuk melakukan pemilihan
+                yang didasarkan pada nilai-nilai konstanta tertentu, yaitu dengan menggunakan statement case.
+            </p>
+            <p>
+                Bentuk umum statement case:
+            </p>
+            <pre><code>
+                case (ekspresi) of
+                    nilai_konstan1 : statement_1;
+                    nilai_konstan2 : statement_2;
+                    ...
+                    nilai_konstan2 : statement_2
+                else
+                    statemen_default;
+                end;
+            </code></pre>
+        </section>
         
     <!-- Footer -->
     <footer>
