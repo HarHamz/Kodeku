@@ -34,57 +34,168 @@
             <div class="background-gradient section-title">
                 <div class="main-text">
                     <h3>Pascal</h3>
-                    <h1>Bab 6: XXXXX</h1>
+                    <h1>Bab 6: Prosedur dan Fungsi</h1>
                 </div>
             </div>
         </article>
 
         <!-- Teori -->
         <section class="container-fluid bab" id="P-6-1">
-            <h1>Lorem ipsum</h1>
+            <h1>Teori</h1>
             <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis nesciunt ducimus consequuntur esse et culpa optio, illo consequatur repellat quibusdam necessitatibus laborum nobis deserunt amet animi expedita architecto quos veniam.
+                Dalam bahasa pemrograman Pascal, subprogram adalah bagian dari program yang memegang tugas tertentu dan dapat dipanggil
+                atau dieksekusi dari bagian lain dari program. Subprogram dapat membantu dalam membuat program menjadi lebih terstruktur,
+                mudah dibaca, dan mudah dikelola. Ada dua jenis subprogram utama dalam Pascal: procedure (prosedur) dan function (fungsi).
+            </p>
+            
+            <h3>1. Procedure (Prosedur)</h3>
+            <p>
+                Prosedur adalah subprogram yang tidak mengembalikan nilai. Mereka digunakan untuk mengelompokkan sejumlah pernyataan yang harus dijalankan bersama-sama.
+                Berikut adalah contoh deklarasi dan penggunaan prosedur:
             </p>
             <pre><code>
-                program ContohArray;
-                uses crt;
+                program ContohProcedure;
 
-                var
-                    // Mendeklarasikan array dengan nama 'angka' yang berisi 5 elemen bertipe integer
-                    angka: array[1..5] of integer;
-
-                    // Mendeklarasikan array dengan nama 'nama' yang berisi 3 elemen bertipe string
-                    nama: array[1..3] of string;
-
-                    // Variabel indeks untuk iterasi
-                    i: integer;
+                // Deklarasi prosedur tanpa parameter
+                procedure Sapa;
+                begin
+                      writeln('Halo! Selamat datang.');
+                end;
 
                 begin
-                    // Mengisi array 'angka' dengan nilai
-                    angka[1] := 10;
-                    angka[2] := 20;
-                    angka[3] := 30;
-                    angka[4] := 40;
-                    angka[5] := 50;
+                      // Panggil prosedur
+                      Sapa;
+                end.
+            </code></pre>
+            
+            <h3>2. Function (Fungsi)</h3>
+            <p>
+                Fungsi adalah subprogram yang mengembalikan nilai. Mereka dapat digunakan untuk melakukan suatu perhitungan dan mengembalikan hasilnya ke pemanggil.
+                Berikut adalah contoh deklarasi dan penggunaan fungsi:
+            </p>
+            <pre><code>
+                program ContohFunction;
 
-                    // Mengisi array 'nama' dengan nilai
-                    nama[1] := 'John';
-                    nama[2] := 'Doe';
-                    nama[3] := 'Alice';
+                // Deklarasi fungsi dengan parameter
+                function Kuadrat(x: integer): integer;
+                begin
+                      Kuadrat := x * x;
+                end;
 
-                    // Menampilkan nilai array 'angka'
-                    writeln('Isi array angka:');
-                    for i := 1 to 5 do
-                        writeln(angka[i]);
+                var
+                      hasil: integer;
 
-                    // Menampilkan nilai array 'nama'
-                    writeln('Isi array nama:');
-                    for i := 1 to 3 do
-                        writeln(nama[i]);
+                begin
+                      // Panggil fungsi dan simpan hasilnya
+                      hasil := Kuadrat(5);
+                      writeln('Hasil kuadrat: ', hasil);
                 end.
             </code></pre>
         </section>
+        
+        <!-- Parameter -->
+        <section class="container-fluid bab" id="P-6-2">
+            <h1>Parameter</h1>
+            <p>
+                Parameter dalam subprogram adalah variabel yang digunakan untuk menerima nilai yang diberikan saat pemanggilan subprogram. Dengan menggunakan parameter,
+                kita dapat mentransfer informasi dari pemanggil subprogram ke dalam subprogram itu sendiri.
+                Parameter memungkinkan subprogram untuk bekerja dengan data yang berbeda setiap kali dipanggil.
+            </p>
+            <p>
+                Dalam Pascal, parameter dapat ditambahkan pada deklarasi prosedur atau fungsi. Ada dua jenis parameter: parameter formal dan parameter aktual.
+            </p>
 
+            <h3>1. Parameter Formal</h3>
+            <p>
+                Parameter formal adalah variabel yang dideklarasikan di dalam tanda kurung kurawal setelah nama subprogram.
+                <br>
+                Berperan sebagai "tempat penampungan" untuk nilai yang akan diberikan saat pemanggilan subprogram.
+                <br>
+                Parameter formal dapat digunakan dalam tubuh subprogram, dan nilai yang diberikan saat pemanggilan akan digunakan oleh parameter formal tersebut.
+            </p>
+            <p>Contoh: </p>
+            <pre><code>
+                procedure Sapa(nama: string);
+                begin
+                    writeln('Halo, ', nama, '! Selamat datang.');
+                end;
+            </code></pre>
+            <p>Di sini, nama adalah parameter formal dari prosedur Sapa.</p>
+
+            <h3>2. Parameter Aktual</h3>
+            <p>
+                Parameter aktual adalah nilai yang diberikan saat pemanggilan subprogram.
+                <br>
+                Nilai ini akan diteruskan ke parameter formal yang sesuai dalam tubuh subprogram.
+            </p>
+            <p>Contoh: </p>
+            <pre><code>
+                begin
+                    // Panggil prosedur dengan memberikan nilai pada parameter
+                    Sapa('John');
+                end.
+            </code></pre>
+            <p>Di sini, 'John' adalah parameter aktual yang diteruskan ke parameter formal nama dalam pemanggilan Sapa('John').</p>
+        </section>
+
+        <!-- Implementasi Parameter dalam Procedure dan Function -->
+        <section class="container-fluid bab" id="P-6-3">
+            <h1>Implementasi Parameter dalam Procedure dan Function</h1>
+            <h3>1. Prodesur Tanpa Parameter</h3>
+            <p>
+                Prosedur tanpa parameter adalah subprogram yang tidak memerlukan nilai tambahan untuk dijalankan.
+                Mereka hanya mengeksekusi serangkaian pernyataan yang ada di dalam tubuh prosedur. Contoh prosedur tanpa parameter:
+            </p>
+            <pre><code>
+                program ProsedurTanpaParameter;
+
+                // Deklarasi prosedur tanpa parameter
+                procedure PesanSambutan;
+                begin
+                    writeln('Selamat datang di program ini!');
+                end;
+
+                begin
+                    // Panggil prosedur tanpa parameter
+                    PesanSambutan;
+                end.
+            </code></pre>
+            <p>Dalam contoh ini, prosedur PesanSambutan tidak memerlukan argumen apa pun dan hanya menampilkan pesan sambutan.</p>
+
+            <h3>2. Prodesur Dengan Parameter</h3>
+            <p>
+                Prosedur dengan parameter adalah subprogram yang menerima nilai sebagai argumen atau input. Parameter digunakan
+                untuk mentransfer informasi ke dalam prosedur sehingga prosedur dapat bekerja dengan data yang diberikan. Berikut adalah contoh prosedur dengan parameter:
+            </p>
+            <pre><code>
+                program ProsedurDenganParameter;
+
+                // Deklarasi prosedur dengan parameter
+                procedure Sapa(nama: string);
+                begin
+                    writeln('Halo, ', nama, '! Selamat datang.');
+                end;
+
+                begin
+                    // Panggil prosedur dengan memberikan nilai pada parameter
+                    Sapa('John');
+                end.
+            </code></pre>
+            <p>Dalam contoh di atas, prosedur Sapa memiliki parameter nama, yang kemudian digunakan dalam tubuh prosedur untuk memberikan sapaan yang sesuai.</p>
+            
+        </section>
+
+        <!-- Keuntungan Menggunakan Subprogram -->
+        <section class="container-fluid bab" id="P-6-4">
+            <h1>Keuntungan Menggunakan Subprogram</h1>
+            <ul>
+                <li>Modularitas: Subprogram memungkinkan kita untuk memecah program menjadi bagian-bagian yang lebih kecil, yang membuat program lebih mudah dimengerti dan dikelola.</li>
+                <li>Reusabilitas: Prosedur dan fungsi dapat dipanggil dari bagian-bagian lain dari program, sehingga kita dapat menggunakan kembali logika tertentu tanpa harus menuliskannya kembali.</li>
+                <li>Perbaikan dan Pemeliharaan: Jika ada kesalahan atau perubahan yang diperlukan dalam suatu tugas, kita hanya perlu memodifikasi subprogram terkait tanpa harus memodifikasi seluruh program.</li>
+                <li>Penyederhanaan Kode: Subprogram dapat membantu menyederhanakan struktur program dan mengurangi redundansi kode.</li>
+            </ul>
+            <p>Penggunaan subprogram sangat umum dalam pembuatan program yang efisien dan mudah dipelihara dalam bahasa Pascal dan banyak bahasa pemrograman lainnya.</p>    
+        </section>
         
     <!-- Footer -->
     <footer>
