@@ -22,8 +22,9 @@ body
 
 pre
 {
-    border: #000000 solid 2px;
-    background-color: #1a1a1a;
+    width: 80%;
+    border: #1d1d1b solid 2px;
+    background-color: #1d1d1b;
     color: #f7f7f7;
 }
 
