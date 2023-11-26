@@ -48,104 +48,73 @@
                 atau akan menghasilkan output yang berbeda saat kondisi tidak terpenuhi (false) atau langsung keluar dari
                 blok operasi.
             </p>
-        </section>
-        <!-- Statemen If -->
-        <section class="container-fluid bab" id="P-3-2">
-            <h1>Statement If</h1>
             <p>
-                Statement if akan diikuti oleh kondisi yang akan diperiksa, dan disusul oleh kata kunci then.
-                Setelah kata kunci then, tulis perintah yang akan dijalankan jika hasil kondisi yang diperiksa sebelumnya bernilai 1 (true).
+                Operasi kondisi dalam Pascal umumnya melibatkan penggunaan struktur pengkondisian, seperti if, else, dan then.
+                Berikut adalah penjelasan operasi kondisi dalam Pascal:
             </p>
-            <h3>1. Statement if Satu Kasus</h3>
+
+            <h3>1. Statement If</h3>
             <p>
-                Statement if satu kasus berarti perintah akan dijalankan hanya jika kondisi yang diperiksa sebelumnya bernilai benar.
-                Apabila kondisi yang diperiksa bernilai salah, maka perintah tidak akan dijalankan.
+                Struktur dasar dari kondisional dalam Pascal adalah pernyataan if.
+                Ini memungkinkan kita mengevaluasi suatu kondisi dan menjalankan satu set pernyataan jika kondisi tersebut benar.
             </p>
-            <p>
-                Bentuk umumnya adalah:
-            </p>
+            <p>Contoh: </p>
             <pre><code>
-                if (kondisi yang diperiksa) then
-                    perintah yang dijalankan;
+                if x > 0 then
+                    writeln('Nilai x positif');
             </code></pre>
-            <h3>2. Statement if Dua Kasus</h3>
+
+            <h3>2. Statement If-Else</h3>
             <p>
-                Jika di bentuk sebelumnya output hanya akan ditampilkan jika kondisi yang diperiksa bernilai benar,
-                di statement if dua kasus, program akan memeriksa kondisi dan akan menampilkan output apabila hasil
-                pemeriksaan kondisi bernilai benar atau salah.
+                Dengan menggunakan pernyataan else, kita dapat menentukan blok pernyataan yang akan dieksekusi ketika kondisi dalam pernyataan if tidak benar.
             </p>
-            <p>
-                Bentuk umumnya adalah:
-            </p>
+            <p>Contoh: </p>
             <pre><code>
-                if (kondisi) then
-                    perintah yang dijalankan jika kondisi terpenuhi/TRUE
+                if x > 0 then
+                    writeln('Nilai x positif')
+
                 else
-                    perintah yang dijalankan jika kondisi tidak terpenuhi/FALSE;
+                    writeln('Nilai x tidak positif');
             </code></pre>
-            <p>Bentuk di atas berlaku jika statemen di setiap kondisi hanya satu baris saja, jika lebih dari satu baris maka:</p>
+
+            <h3>3. Statement If-Else Bersarang</h3>
+            <p>
+                Kita dapat menggunakan pernyataan kondisional dalam pernyataan kondisional lainnya untuk membuat struktur pengkondisian bersarang.
+            </p>
+            <p>Contoh: </p>
             <pre><code>
-                if (kondisi) then
+                if x > 0 then
                 begin
-                    perintah_1;
-                    ...
-                    perintah_x;
+                    if x mod 2 = 0 then
+                        writeln('Nilai x positif dan genap')
+                    else
+                        writeln('Nilai x positif dan ganjil');
                 end
                 else
-                begin
-                    perintah_y;
+                    writeln('Nilai x tidak positif');
+            </code></pre>
+
+            <h3>4. Statement Case</h3>
+            <p>
+                Case statement digunakan untuk mengevaluasi ekspresi dan memilih satu dari beberapa blok pernyataan untuk dieksekusi berdasarkan nilai ekspresi.
+            </p>
+            <p>Contoh: </p>
+            <pre><code>
+                case nilai of
+                    1: writeln('Nilai adalah 1');
+                    2: writeln('Nilai adalah 2');
+                    3: writeln('Nilai adalah 3');
+                else
+                    writeln('Nilai tidak sesuai dengan kasus yang didefinisikan');
                 end;
             </code></pre>
             <p>
-                Perlu diingat, jika ada perintah sebelum else, perintah end tersebut TIDAK BOLEH diakhiri dengan titik koma (;).
-                Misalnya pada bentuk umum pertama, sebelum else (...terpenuhi/TRUE) tidak ada tanda titik koma (;),
-                sama juga pada bentuk umum yang kedua, perintah end di dalam if tidak ada titik koma (;)
-                karena program masih dilanjutkan oleh else.
+                Operasi kondisi ini memungkinkan pengembang Pascal untuk membuat alur kontrol yang dinamis dalam program mereka,
+                di mana jalur eksekusi program dapat bervariasi tergantung pada nilai atau kondisi tertentu. Dengan menggunakan operasi kondisi,
+                kita dapat membuat program yang lebih fleksibel dan responsif terhadap perubahan dalam input atau keadaan program.
             </p>
-            <h3>3. Statement if Tiga Kasus atau Lebih</h3>
-            <p>
-                Bentuk ini akan menguji lebih dari satu kondisi, dan akan menampilkan perintah yang berbeda-beda tergantung kondisi mana yang terpenuhi.
-            </p>
-            <pre><code>
-                if (kondisi_1) then
-                begin
-                    perintah_jika_kondisi_1_benar;
-                    ...
-                end
-                else if (kondisi_2) then
-                begin
-                    perintah_jika_kondisi_2_benar;
-                    ...
-                end
-                else
-                begin
-                    perintah; 
-                end;
-            </code></pre>
         </section>
-        <!-- Statemen Case -->
-        <section class="container-fluid bab" id="P-3-2">
-            <h1>Statement Case</h1>
-            <p>
-                Apabila kondisi yang didefinisikan di dalam statement if semakin banyak,
-                maka hal tersebut tentu akan menjadi hal yang cukup kompleks.
-                Oleh karena itu, bahasa Pascal menyediakan alternatif lain untuk melakukan pemilihan
-                yang didasarkan pada nilai-nilai konstanta tertentu, yaitu dengan menggunakan statement case.
-            </p>
-            <p>
-                Bentuk umum statement case:
-            </p>
-            <pre><code>
-                case (ekspresi) of
-                    nilai_konstan1 : statement_1;
-                    nilai_konstan2 : statement_2;
-                    ...
-                    nilai_konstan2 : statement_2
-                else
-                    statemen_default;
-                end;
-            </code></pre>
-        </section>
+
         
     <!-- Footer -->
     <footer>
