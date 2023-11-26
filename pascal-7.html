@@ -204,21 +204,21 @@
                     Mahasiswa = record
                         Nama: string;
                         NIM: string;
-                        Lokasi: Alamat; // *nested record* Alamat
+                        Lokasi: Alamat; // nested record Alamat
                     end;
 
                 var
                     mhs: Mahasiswa;
 
                 begin
-                    // Mengisi data ke dalam *nested record*
+                    // Mengisi data ke dalam nested record
                     mhs.Nama := 'John Doe';
                     mhs.NIM := '12345';
                     mhs.Lokasi.Jalan := 'Jl. Merdeka No. 10';
                     mhs.Lokasi.Kota := 'Bandung';
                     mhs.Lokasi.KodePos := '40123';
 
-                    // Menampilkan data dari *nested record*
+                    // Menampilkan data dari nested record
                     writeln('Nama: ', mhs.Nama);
                     writeln('NIM: ', mhs.NIM);
                     writeln('Alamat: ', mhs.Lokasi.Jalan, ', ', mhs.Lokasi.Kota, ' ', mhs.Lokasi.KodePos);
