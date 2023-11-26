@@ -220,6 +220,11 @@ section .section-row
     margin-top: 20px;
 }
 
+p.sumber
+{
+    font-size: 0.8rem;
+}
+
 footer
 {
     height: auto;
