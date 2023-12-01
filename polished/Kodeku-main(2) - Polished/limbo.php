@@ -1,0 +1,1 @@
+<!-- page for handling register or login -->

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodeku</title>
+    <link rel="icon" href="img/logo_only.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="navbar-container">
+        <a class="navbar-brand px-3" href="index.html"><img src="img/logo_sekunder.png" alt="Logo" class="main-logo"></a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <ul>
+                <li>
+                    <a class="nav-link" href="index.html#pascal">Pascal</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="logsign">
+            <a class="btn btn-primary" href="login.html" role="button">Log In</a>
+            <a class="btn btn-primary" href="signup.html" role="button">Sign Up</a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <!-- Background Article -->
+        <article class="container-fluid top">
+            <div class="background-gradient section-title">
+                <div class="main-text">
+                    <h3>Pascal</h3>
+                    <h1>Bab 1: Pengenalan dan Tipe Data</h1>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sejarah -->
+        <section class="container-fluid bab" id="P-1-1">
+            <h1>Sejarah</h1>
+            <p>
+                Bahasa pemrograman Pascal dikembangkan oleh Niklaus Wirth pada tahun 1970
+                dengan tujuan untuk mengajarkan konsep dasar pemrograman komputer kepada
+                mahasiswa di Swiss Federal Institute of Technology. Wirth ingin menciptakan
+                bahasa yang sederhana, mudah dipahami, dan dapat diterapkan dalam berbagai jenis proyek.
+                Nama "Pascal" diambil dari nama matematikawan terkenal asal Prancis, Blaise Pascal.
+            </p>
+            <p>
+                Pada awalnya dirilis pada tahun 1971, Pascal berfungsi sebagai bahasa pemrograman
+                untuk sistem operasi P-system, yang dikembangkan oleh Universitas California, Berkeley.
+                P-system menggunakan Pascal sebagai bahasa pemrograman utamanya dan menyediakan beragam alat
+                untuk pengembangan aplikasi. Selain itu, Pascal digunakan dalam pembuatan sistem operasi lainnya.
+            </p>
+            <p>
+                Pascal menjadi populer di kalangan akademisi maupun profesional karena kesederhanaannya
+                dan struktur yang terdefinisi dengan baik. Bahasa ini diakui karena kualitasnya dalam
+                pemrograman terstruktur dan pengembangan aplikasi yang efisien.
+            </p>
+        </section>
+
+        <!-- Fitur -->
+        <section class="container-fluid bab" id="P-1-2">
+            <h1>Fitur</h1>
+            <p>
+                Beberapa fitur utama dari bahasa pemrograman Pascal yang membuatnya cocok untuk digunakan
+                sebagai alat pembelajaran dan pengembangan aplikasi komersial meliputi:
+            </p>
+            <h3>1. Tipe Data Umum</h3>
+            <p>
+                Pascal memiliki tipe data yang umum digunakan dalam bahasa pemrograman komputer lain seperti 
+                <i>real</i>, <i>integer</i>, <i>character</i>, dan <i>boolean</i>. Tipe data ini dikenal sebagai tipe data bawaan dalam Pascal.
+            </p>
+            <h3>2. Tipe Data Bentukan</h3>
+            <p>
+                Pascal menyediakan fitur untuk membuat tipe data yang ditentukan oleh programmer sendiri, yang disebut tipe data bentukan.
+                Hal ini memungkinkan programmer membuat tipe data yang sesuai dengan kebutuhan aplikasi yang akan dibuat.
+            </p>
+            <h3>3. Struktur Data</h3>
+            <p>Pascal menyediakan berbagai macam struktur data seperti file, set, array, dan record yang
+                memungkinkan programmer untuk menyimpan dan mengelola data dengan lebih efisien.
+                Hal ini sangat membantu dalam menyelesaikan berbagai jenis masalah yang mungkin dihadapi
+                dalam pengembangan aplikasi.
+            </p>
+            <h3>4. Aturan Tipe Data yang Ketat</h3>
+            <p>
+                Pascal memiliki aturan tipe data yang cukup ketat, sehingga programmer harus menentukan
+                tipe data dari variabel yang digunakan dan tidak boleh digunakan untuk tipe data lain.
+                Pengguna juga harus mendeklarasikan variabel terlebih dahulu sebelum digunakan dalam program.
+            </p>
+            <h3>5. Mendukung <i>Structural Programming</i></h3>
+            <p>
+                Pascal telah mendukung metode pemrograman struktural yang memungkinkan untuk memisahkan kode
+                program menjadi bagian-bagian yang lebih kecil dan terorganisir dengan baik melalui penggunaan
+                prosedur dan fungsi. Hal ini membuat kode program lebih mudah dibaca, dipahami,
+                dan diubah sesuai kebutuhan.
+            </p>
+            <h3>6. Sintaks yang Sederhana</h3>
+            <p>
+                Pascal memiliki sintaks yang sederhana dan ekspresif, sehingga program yang ditulis dalam
+                bahasa ini mudah dipahami dan diuraikan. Perintah yang digunakan dalam bahasa ini menggunakan
+                Bahasa Inggris yang sederhana, sehingga mudah untuk dipelajari dan digunakan.
+            </p>
+        </section>
+
+        <!-- Struktur Program -->
+        <section class="container-fluid bab" id="P-1-3">
+            <h1>Struktur Program</h1>
+            <pre><code>
+                program &lt;judul program&gt;
+                uses &lt;daftar unit&gt;
+
+                &lt;bagian deklarasi&gt;
+
+                begin
+                &lt;statemen-statemen&gt;
+                end.
+            </code></pre>
+            <h3>&lt;judul program&gt;</h3>
+            <p>Biasanya sama dengan nama program.</p>
+            <h3>&lt;daftar unit&gt;</h3>
+            <p>Berisi unit-unit yang akan digunakan. Jika lebih dari 1 maka dipisahkan dengan tanda koma (,).</p>
+            <h3>&lt;bagian deklarasi&gt;</h3>
+            <p>
+                Berisi deklarasi-deklarasi yang dibutuhkan program, yang meliputi:
+                <ul>
+                    <li>Tipe Data</li>
+                    <li>Konstanta</li>
+                    <li>Variabel</li>
+                    <li>Prosedur</li>
+                    <li>Fungsi</li>
+                    <li>Label</li>
+                </ul>
+            </p>
+            <h3>&lt;statemen-statemen&gt;</h3>
+            <p>
+                merupakan perintah-perintah yang akan dituliskan. Statemen- statemen ini harus berada di dalam blok begin-end.
+                Berikut ini contoh penulisan statemen-statemen di dalam program.
+            </p>
+        </section>
+
+        <!-- Prosedur Write dan Read -->
+        <section class="container-fluid bab" id="P-1-4">
+            <h1>Prosedur Write dan Read</h1>
+            <p>Dalam pembuatan program tentunya akan melakukan banyak penulisan (output) dan pembacaan (input) data.
+                Dalam bahasa Pascal, prosedur yang digunakan untuk melakukan penulisan adalah Write,
+                sedangkan untuk melakukan pembacaan adalah Read. Prosedur Write dan Read kadang kala diakhiri dengan
+                ln (singkatan dari line) menjadi Writeln dan Readln yang berguna untuk memindahkan kursor ke baris baru
+                di bawahnya setelah program melakukan proses input ataupun output. Prosedur Read juga bisa diakhiri dengan
+                key menjadi Readkey yang berfungsi untuk membaca sebuah karakter. Prosedur Readln dan Readkey juga digunakan
+                di akhir program agar hasil dari program dapat dilihat.</p>
+        </section>
+
+        <!-- Komentar Program -->
+        <section class="container-fluid bab" id="P-1-5">
+            <h1>Komentar Program</h1>
+            <p>Ada dua macam cara untuk membuat komentar program pada bahasa Pascal:<br><br>
+                - Menggunakan tanda (*…*)atau {…}<br>
+                Digunakan untuk menuliskan komentar yang banyaknya lebih dari satu baris.<br>
+                - Menggunakan tanda //…<br>
+                Digunakan untuk menuliskan satu baris komentar.</p>
+            <p>Contoh:</p>
+            <pre><code>
+                begin // ini komentar 1 baris di kanan sintaks program
+                clrscr;
+                {ini komentar 2 baris, yang berada di dalam kurung kurawal}
+                writeln('S-1 Ilmu Komputer USU');
+                end.
+            </code></pre>
+        </section>
+
+        <!-- Variabel -->
+        <section class="container-fluid bab" id="P-1-6">
+            <h1>Variabel</h1>
+            <p>Adalah suatu pengenal yang didefinisikan oleh programmer untuk menyimpan nilai atau
+                data tertentu yang dibutuhkan dalam program pada saat program sedang berjalan (run time). <br>
+                Bentuk umum pendeklarasian variabel:</p>
+            <pre><code>
+                var
+                NamaVariabel : tipe_data;
+            </code></pre>
+            <pre><code>
+                var
+                x    : integer;
+                nama : string[25];
+            </code></pre>
+        </section>
+
+        <!-- Konstanta -->
+        <section class="container-fluid bab" id="P-1-7">
+            <h1>Konstanta</h1>
+            <p>Konstanta adalah variabel yang bernilai tetap selama program berjalan. Bentuk umum konstanta:</p>
+            <pre><code>
+                const
+                    NamaKonstanta1 : nilaiKonstanta1;
+                    NamaKonstanta2 : nilaiKonstanta2;
+            </code></pre>
+        </section>
+
+        <!-- Tipe Data -->
+        <section class="container-fluid bab" id="P-1-8">
+            <h1>Tipe Data</h1>
+            <h3>Bilangan Bulat</h3>
+            <p>Berikut ini tipe data yang termasuk ke dalam tipe bilangan bulat di dalam bahasa Pascal:</p>
+            <table class="table table-striped">
+                <tr>
+                    <th>Tipe Data</th>
+                    <th>Penjelasan</th>
+                    <th>Alokasi Memori</th>
+                </tr>
+                <tr>
+                    <td>Shortint</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari -128 hingga 127</td>
+                    <td>(1 byte)</td>
+                </tr>
+                <tr>
+                    <td>Integer</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari -32768 hingga 32767</td>
+                    <td>(2 byte)</td>
+                </tr>
+                <tr>
+                    <td>LongInt</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari -2147483648 hingga 2147383647</td>
+                    <td>(4 byte)</td>
+                </tr>
+                <tr>
+                    <td>Byte</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari 0 hingga 255</td>
+                    <td>(1 byte)</td>
+                </tr>
+                <tr>
+                    <td>Word</td>
+                    <td>Tipe data dengan nilai bilangan bulat mulai
+                        dari 0 hingga 65535</td>
+                    <td>(2 byte)</td>
+                </tr>
+            </table>
+
+            <h3>Bilangan Riil</h3>
+            <p>Adalah bilangan yang mengandung angka di belakang koma. Tipe data yang termasuk ke dalam tipe bilangan riil:</p>
+            <table class="table table-striped">
+                <tr>
+                    <th>Tipe Data</th>
+                    <th>Jangkauan Nilai</th>
+                </tr>
+                <tr>
+                    <td>Real</td>
+                    <td>2.9 &times; 10<sup>-39</sup> sampai 1.7 &times; 10<sup>38</sup></td>
+                </tr>
+                <tr>
+                    <td>Single</td>
+                    <td>1.5 &times; 10<sup>-45</sup> sampai 3.4 &times; 10<sup>38</sup></td>
+                </tr>
+                <tr>
+                    <td>Double</td>
+                    <td>5.0 &times; 10<sup>-324</sup> sampai 1.7 &times; 10<sup>308</sup></td>
+                </tr>
+                <tr>
+                    <td>Extended</td>
+                    <td>3.4 &times; 10<sup>-4932</sup> sampai 1.7 &times; 1.1<sup>4932</sup></td>
+                </tr>
+                <tr>
+                    <td>Double</td>
+                    <td>-9.2 &times; 10<sup>-18</sup> sampai 9.2 &times; 10<sup>18</sup></td>
+                </tr>
+            </table>
+
+            <h3>Karakter</h3>
+            <p>Tipe ini direpresentasikan dengan menggunakan tipe data char. Berguna untuk merepresentasikan nilai-nilai karakter seperti 'A','B','C','D','E'.</p>
+            
+            <h3>String</h3>
+            <p>Tipe ini direpresentasikan dengan menggunakan tipe data string. String merupakan kumpulan dari karakter yang terangkai menjadi satu kata ataupun kalimat, misalnya 'Hello, world!'.</p>
+        
+            <h3>Tipe Logika</h3>
+            <p>Tipe yang hanya memiliki dua buah nilai yaitu true dan false. Pascal menyediakan tipe khusus untuk mendefinisikan data-data logic tersebut, yaitu tipe data Boolean.</p>
+        </section>
+
+        <!-- Penulisan Identifier -->
+        <section class="container-fluid bab" id="P-1-9">
+            <h1>Penulisan Identifier</h1>
+            <p>Identifier merupakan suatu nama yang digunakan sebagai pengenal dari suatu variabel, fungsi, konstanta, struct, objek dan sebagainya. Penulisan identifier yang sah harus mengikuti aturan berikut:</p>
+            <ol>
+                <li>Gabungan dari huruf-huruf. Contoh: nama, saya, aku, satu dan sebagainya.</li>
+                <li>Gabungan dari huruf dan angka dimana harus diawali dengan huruf terlebih dahulu.
+                    Contoh : N01,  N4ma, Say4, s4t0 dan sebagainya.</li>
+                <li>Dimulai dengan tanda underscore. Contoh: _aku, _kamu, _dia, _1satu.</li>
+                <li>Apabila lebih dari satu kata digunakan tanda underscore. Contoh: saya_makan, aku_cinta_dia, fungsi_satu, konstanta_1 dan sebagainya.</li>
+                <li>Tidak berupa sintaks/prosedur bawaan dari Pascal. Contoh: write, read, for, case, if, dll.</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2023 - Kodeku
+        <a class="navbar-brand px-3" href="index.html"><img src="img/logo_primer.png" alt="Logo" class="main-logo"></a>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">   
+            <ul>
+                <li><a class="nav-link" href="index.html">Beranda</a></li>
+                <li><a class="nav-link" href="contact.html">Kontak</a></li>
+                <li><a class="nav-link" href="about.html">Tentang</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
