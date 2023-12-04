@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodeku</title>
+    <link rel="icon" href="img/logo_only.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <?php
+        include "header.php";
+    ?>
+
+    <!-- Main -->
+    <main>
+        <!-- Background Article -->
+        <article class="container-fluid top">
+            <div class="background-gradient section-title">
+                <div class="main-text">
+                    <h3>Pascal</h3>
+                    <h1>Bab 8: Pointer</h1>
+                </div>
+            </div>
+        </article>
+
+        <!-- Teori -->
+        <section class="container-fluid bab" id="P-8-1">
+            <h1>Teori</h1>
+            <p>
+                Dalam bahasa pemrograman Pascal, pointer adalah variabel yang digunakan untuk menyimpan alamat memori dari suatu variabel atau objek lainnya.
+                Alamat memori ini memungkinkan kita untuk secara langsung mengakses atau memanipulasi nilai yang disimpan di lokasi memori tersebut.
+                Dengan kata lain, pointer adalah cara untuk mengakses dan mengontrol memori secara langsung.
+            </p>
+            <p>
+                Berikut adalah beberapa konsep dasar tentang pointer dalam Pascal:
+            </p>
+
+            <h3>1. Deklarasi Pointer</h3>
+            <p>Pointer dideklarasikan dengan menggunakan operator ^. Berikut adalah contoh deklarasi pointer untuk variabel bertipe integer:</p>
+            <pre><code>
+                var
+                    ptr: ^integer;
+            </code></pre>
+            
+            <h3>2. Penugasan Pointer</h3>
+            <p>Pointer diberikan nilai alamat memori dengan menggunakan operator @ atau fungsi New. </p>
+            <pre><code>
+                var
+                    x: integer;
+                    ptr: ^integer;
+
+                begin
+                    x := 42;
+                    ptr := @x; // Memberikan alamat memori dari x ke ptr
+                end.
+            </code></pre>
+
+            <pre><code>
+                New(ptr); // Mengalokasikan memori untuk integer dan memberikan alamatnya ke ptr
+            </code></pre>
+            
+            <h3>3. Dereferensi Pointer</h3>
+            <p>Untuk mendapatkan nilai yang disimpan di alamat memori yang ditunjuk oleh pointer, kita menggunakan operator ^.</p>
+
+                writeln('Nilai x melalui pointer: ', ptr^);
+            
+            <h3>4. Dealokasi Memori</h3>
+            <p>Jika kita menggunakan New untuk mengalokasikan memori, kita juga harus melakukan dealokasi menggunakan Dispose agar tidak terjadi kebocoran memori:</p>
+            <pre><code>
+                Dispose(ptr);
+            </code></pre>
+
+            <p>
+                Penggunaan pointer dapat sangat berguna dalam beberapa konteks, seperti pengelolaan memori dinamis,
+                manipulasi data secara langsung di level bit, atau untuk pengembangan struktur data yang lebih kompleks.
+                Namun, penggunaannya harus dilakukan dengan hati-hati untuk menghindari kesalahan dan kebocoran memori.
+            </p>
+        </section>
+
+        
+    <!-- Footer -->
+    <?php
+        include "footer.php";
+    ?>
+
+    <script src="script.js"></script>
+</body>
+</html>
