@@ -67,7 +67,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="input_password_2" class="form-label">Ketik Ulang Password</label>
-                  <input type="password" class="form-control" id="input_password_2" 
+                  <input type="password" class="form-control" id="input_password_2"
                   placeholder="Retype Password" name="password2" required>
                 </div>
                 <br>
