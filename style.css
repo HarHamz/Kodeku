@@ -226,6 +226,26 @@ p.sumber
     font-size: 0.8rem;
 }
 
+.komentar-user
+{
+    border: 1px solid black;
+    width: 80%;
+}
+.komentar-user h3
+{
+    text-align: left;
+    font-family: 'Consolas';
+    font-weight: bold;
+    font-size: large;
+    padding: 1rem 1rem 0 1rem;
+}
+.komentar-user p
+{
+    
+    text-align: left;
+    padding: 0 1rem 1rem 1rem;
+}
+
 footer
 {
     height: auto;

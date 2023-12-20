@@ -286,6 +286,36 @@
         </section>
     </main>
 
+    <!-- Comments -->
+    <section class="container-fluid bab komentar" id="komentar">
+        <div class="section-column">
+            <h1>Komentar</h1>
+            <form action="message.php">
+                <div class="mb-3">
+                  <label for="input_nama" class="form-label">Nama</label>
+                  <input type="text" class="form-control" id="input_nama" placeholder="Nama" name="name" required>
+                </div>
+                <div class="mb-3">
+                  <label for="input_email" class="form-label">Alamat Email</label>
+                  <input type="email" class="form-control" id="input_email" placeholder="contoh@gmail.com" name="email" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Komentar</label>
+                  <textarea class="form-control" id="input_message" placeholder="Komentar" name="message" required></textarea>
+                </div>
+                <!-- TODO: submit habistu kemana -->
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+            <hr>
+
+            <!-- TODO: komentar-user adalah komentar tiap user -->
+            <div class="komentar-user">
+                <h3>John Doe</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor magni veniam officia labore deserunt magnam ipsum accusantium tenetur quod rerum. Molestias, illo perferendis!</p>
+            </div>
+        </div>
+    </section>
+    
     <!-- Footer -->
     <?php
         include "footer.php";
