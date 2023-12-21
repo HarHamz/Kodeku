@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodeku</title>
+    <link rel="icon" href="img/logo_only.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <?php
+        include "header.php";
+    ?>
+
+    <!-- Main -->
+    <main>
+        <!-- Background Article -->
+        <article class="container-fluid top">
+            <div class="background-gradient section-title">
+                <div class="main-text">
+                    <h3>Pascal</h3>
+                    <h1>Bab 4: Perulangan dan Peloncatan</h1>
+                </div>
+            </div>
+        </article>
+
+        <!-- Teori -->
+        <section class="container-fluid bab" id="P-4-1">
+            <h1>Teori</h1>
+            <p>
+                Blok pengulangan merupakan suatu blok program yang memiliki mekanisme untuk melakukan
+                <i>statement</i> secara berulang.
+                Hal ini tentu akan membuat program yang ditulis menjadi lebih efisien.
+                <br><br>
+                <i>Statement</i> peloncatan merupakan <i>statement</i> yang digunakan untuk memaksa program
+                agar meloncat atau menuju <i>statement</i> tertentu yang kita inginkan. Dalam bahasa Pascal
+                terdapat sebuah statement yang sering digunakan untuk melakukan hal tersebut yaitu <i>statement</i> <b><i>goto</i></b>
+                dan empat buah prosedur yaitu <b><i>break, continue, exit,</i></b> dan <b><i>halt</i></b>.
+            </p>
+        </section>
+
+        <!-- Perulangan -->
+        <section class="container-fluid bab" id="P-4-2">
+            <h1>Perulangan</h1>
+            <h3>1. Statement For</h3>
+            <p>
+                Konstruksi pengulangan <b><i>for</i></b> pada umumnya digunakan untuk melakukan pengulangan
+                yang banyaknya sudah diketahui secara pasti.
+                <br><br>
+                Bentuk umum dari <i>statement for</i>:
+                <pre><code>
+                    <b>for</b> variable_index := batas_awal <b>to</b> batas_akhir <b>do</b>
+                        statement_yang_akan_diulang;
+                </code></pre>
+                NB: Jika statement yang ingin diulang hanya 1 baris, tidak perlu menggunakan begin-end.
+                Tetapi jika statement yang ingin diulang lebih dari 1 baris, statement harus diletakkan di dalam begin-end.
+                <pre><code>
+                    <b>for</b> variable_index := batas_awal <b>to</b> batas_akhir <b>do</b>
+                        <b>begin</b>
+                            statement_looping_1;
+                            statement_looping_2;
+                            ...
+                            statement_looping_x;
+                        <b>end;</b>
+                </code></pre>
+                <br>
+            </p>
+        
+            <h3>2. Statement While</h3>
+            <p>
+                Berbeda dengan bentuk pengulangan <i>for</i>, pada konstruksi pengulangan <b><i>while</i></b>
+                ini terdapat suatu kondisi yang harus diperiksa terlebih dahulu. Apabila kondisi bernilai <i>true</i>,
+                maka <i>statement</i> di dalam blok <b><i>while</i></b> akan dikerjakan, sedangkan jika <i>false</i>,
+                maka program tidak akan melakukan perulangan.
+                <br><br>
+                Bentuk umum dari <i>statement while</i>:
+                <pre><code>
+                    <b>while</b> (kondisi) <b>do</b>
+                        statement;
+                </code></pre>
+                NB: Jika statement yang ingin diulang hanya 1 baris, tidak perlu menggunakan begin-end.
+                Tetapi jika statement yang ingin diulang lebih dari 1 baris, statement harus diletakkan di dalam begin-end.
+                <pre><code>
+                    <b>while</b> (kondisi) <b>do</b>
+                        <b>begin</b>
+                            statement_1;
+                            statement_2;
+                            ...
+                            statement_x;
+                        <b>end;</b>
+                </code></pre>
+                <br>
+            </p>
+
+            <h3>3. Statement Repeat-Until</h3>
+            <p>
+                Pernyataan <i>repeat-until</i> digunakan untuk mengulang (<i>repeat</i>) suatu pernyataan atau
+                blok pernyataan terus-menerus sampai (<i>until</i>) kondisi ungkapannya tidak terpenuhi (<i>false</i>).
+                <br><br>
+                Struktur penggunaan perulangan <i>repeat-until</i>:
+                <pre><code>
+                    <b>repeat</b>
+                        pernyataan_yang_diulang;
+                    <b>until</b> (ekspresi_logika);
+                </code></pre>
+            </p>
+        </section>
+
+        <!-- Peloncatan -->
+        <section class="container-fluid bab" id="P-4-3">
+            <h1>Peloncatan (Penggunaan Label)</h1>
+            <h3>1. Label dan Statement Goto</h3>
+            <p>
+                Untuk menggunakan <i>statement</i> <b><i>goto</i></b>, sebelumnya harus mendefinisikan sebuah label
+                dengan menggunakan kata kunci label. Di sini label akan berperan sebagai baris yang akan dituju.
+                Dengan kata lain, <i>statement</i> <b><i>goto</i></b> akan memindahkan program secara langsung ke lokasi yang ditandai oleh label yang telah didefinisikan.
+                <pre><code>
+                    program statement_goto;
+                    uses crt;
+                    label destination;
+
+                    begin
+                        clrscr;
+
+                        writeln('Statement pertama');
+                        goto destination;
+                        writeln('Statement kedua');
+                        writeln('Statement ketiga');
+                        destination: writeln('Ini adalah statement yang akan dituju');
+
+                        readln;
+                    end.
+                </code></pre>
+            </p>
+            <br>
+            <h3>2. Prosedur Break</h3>
+            <p>
+                Prosedur <b><i>break</i></b> digunakan untuk meloncat dari proses perulangan. Prosedur ini akan memaksa program untuk
+                menghentikan perulangan dan akan langsung menuju ke <i>statement</i> selanjutnya yang terdapat di bawah blok pengulangan.
+                <pre><code>
+                    program prosedur_break;
+                    uses crt;
+                    var
+                        i: integer;
+
+                    begin
+                        clrscr;
+
+                        writeln('Ini adalah statement sebelum looping');
+                        writeln;
+
+                        for i := 1 to 100 do
+                            begin
+                                if (i > 3) then
+                                    break;
+                                writeln('Statement ke-', i);
+                        
+                        writeln;
+                        writeln('Apa yang terjadi?');
+
+                        readln;
+                    end.
+                </code></pre>
+            </p>
+            <br><br>
+            <h3>3. Prosedur Continue</h3>
+            <p>
+                Prosedur <b><i>continue</i></b> merupakan kebalikan dari prosedur <i>break</i>, yaitu berguna untuk melanjutkan pengulangan dengan cara meloncat ke bagian awal pengulangan.
+                Pada umumnya prosedur <b><i>continue</i></b> diguanakn di dalam kasus di mana kondisi pengulangannya selalu bernilai <i>true</i>.
+                <pre><code>
+                    program prosedur_continue;
+                    uses crt;
+                    var
+                        x: integer;
+
+                    begin
+                        clrscr;
+
+                        while (true) do
+                            begin
+                                write('Masukkan bilangan bulat negatif: '); read(x);
+                                if (x > -1) then
+                                    continue
+                                else
+                                    writeln('Anda telah memasukkan bilangan: ', x);
+                            end;
+                        readln;
+                    end.
+                </code></pre>
+            </p>
+            <br><br>
+            <h3>4. Prosedur Exit</h3>
+            <p>
+                Prosedur <b><i>exit</i></b> digunakan untuk keluar dari suatu blok program. Namun apabila prosedur <b><i>exit</i></b> digunakan dalam program yang sama,
+                maka prosedur tersebut akan menyebabkan program berhenti.
+                <pre><code>
+                    program prosedur_exit;
+                    uses crt;
+                    procedure contoh;
+                    begin
+                        writeln('Statement 1 di dalam prosedur');
+                        exit;
+                        writeln('Statement 2 di dalam prosedur');
+                    end;
+
+                    begin
+                        clrscr;
+
+                        writeln('Statement 1 di dalam program utama');
+                        contoh;
+                        writeln('Statement 2 di dalam program utama');
+                        
+                        readln;
+                    end.
+                </code></pre>
+            </p>
+            <br><br>
+            <h3>5. Prosedur Halt</h3>
+            <p>
+                Berbeda dengan prosedur <i>exit</i> yang digunakan untuk keluar dari blok program, prosedur <b><i>halt</i></b> berguna untuk keluar dari program.
+                Prosedur <b><i>halt</i></b> memiliki parameter berupa nilai <b>0</b> dan <b>1</b> yang bersifat <b>opsional</b>.
+                <i>Statement</i> yang terdapat di bawah prosedur <b><i>halt</i></b> tidak akan dieksekusi oleh program karena program akan langsung dihentikan.
+                <pre><code>
+                    program prosedur_halt;
+                    uses crt;
+
+                    begin
+                        clrscr;
+
+                        writeln('Statement sebelum pemanggilan prosedur halt');
+                        halt(1);
+                        writeln('Statement sesudah pemanggilan prosedur halt');
+                        
+                        readln;
+                    end.
+                </code></pre>
+            </p>
+        </section>
+        
+        <!-- Comments -->
+    <?php
+        include "comment.php";
+    ?>
+
+
+    <!-- Footer -->
+    <?php
+        include "footer.php";
+    ?>
+
+    <script src="script.js"></script>
+</body>
+</html>

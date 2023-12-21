@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body
+{
+    overflow-x: hidden;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+    font-family: 'Consolas', sans-serif;
+}
+
+pre
+{
+    width: 80%;
+    border: #1d1d1b solid 2px;
+    background-color: #1d1d1b;
+    color: #f7f7f7;
+}
+
+header
+{
+    height: 10vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    position: sticky;
+    margin-inline: auto;
+    align-items: center;
+    z-index: 999;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+header .main-logo
+{
+    height: 2rem;
+    margin-bottom: 10px;
+}
+
+header .navbar ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+} 
+
+header .navbar ul li
+{
+    list-style-type: none;
+}
+
+header .navbar ul li a
+{
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    margin-left: 1rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+header .navbar ul li:hover a
+{
+    background-color: #4C02F1;
+    color: white;
+}
+
+header .logsign
+{
+    margin-left: auto;
+    padding-right: 2rem;
+}
+
+.buffer
+{
+    height: 5vh;
+}
+
+main
+{
+    background-color: #f7f7f7;
+    height: auto;
+}
+
+
+h1
+{
+    font-family: 'Montserrat';
+    font-size: 60px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h3
+{
+    font-family: 'Montserrat';
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+
+.main-text h3
+{
+    color: #FFFFFF;
+}
+
+.top .main-text h1
+{
+    color: #FFFFFF;
+}
+
+.section-row h1
+{
+    color: #1a1a1a;
+}
+
+.container-fluid
+{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    height: auto;
+}
+
+.background-gradient
+{
+    background-image: linear-gradient(150deg, #4C02F1, #06044A);
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.section-title
+{
+    height: auto;
+    padding: 100px;
+}
+
+.top .background-gradient img
+{
+    width: 300px;
+}
+
+.main-text
+{
+    width: 60%;
+    align-items: center;
+}
+
+form
+{
+    width: 80%;
+}
+
+section .section-row
+{
+    position: relative;
+    display: flex;
+    margin: 35px 0;
+    padding: 30px 0px;
+    left: 15%;
+    width: 70%;
+    height: auto;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f7f7f7;
+    border: #1a1a1a solid 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bab
+{
+    position: relative;
+    margin: 35px;
+    padding: 30px;
+    left: 15%;
+    width: 70%;
+    height: auto;
+    background-color: #f7f7f7;
+    border: #1a1a1a solid 2px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.bab h1
+{
+    font-size: 50px;
+}
+.bab h3
+{
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-top: 20px;
+}
+
+.bab h4
+{
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 0;
+    margin-top: 20px;
+}
+
+p.sumber
+{
+    font-size: 0.8rem;
+}
+
+.komentar-user
+{
+    border: 1px solid black;
+    width: 80%;
+}
+.komentar-user h3
+{
+    text-align: left;
+    font-family: 'Consolas';
+    font-weight: bold;
+    font-size: large;
+    padding: 1rem 1rem 0 1rem;
+}
+.komentar-user p
+{
+    
+    text-align: left;
+    padding: 0 1rem 1rem 1rem;
+}
+
+footer
+{
+    height: auto;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    margin-inline: auto;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 999;
+    background-color: #f7f7f7;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 10px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer .main-logo
+{
+    height: 8rem;
+}
+
+footer .navbar
+{
+    margin: 0;
+    padding: 0;
+}
+footer .navbar ul
+{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem 1rem;
+} 
+
+footer .navbar ul li
+{
+    list-style-type: none;
+}
+
+footer .navbar ul li a
+{
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: black;
+    padding: .5rem 1.5rem;
+    border-radius: 999px;
+    transition: all .2s ease-in-out;
+}
+
+footer .navbar ul li:hover a
+{
+    background-color: #4C02F1;
+    color: white;
+}
+
+@media screen and (max-width: 768px)
+{
+    header
+    {
+        position: static;
+    }
+
+    header.navbar-container
+    {
+        height: auto;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+    
+    header.navbar-container .nav-list ul
+    {
+        flex-wrap: wrap;
+        column-gap: .5rem;
+    }
+
+    h1
+    {
+        font-size: 40px;
+    }
+
+    .main-text
+    {
+        min-width: 70%;
+    }
+
+    .top .background-gradient
+    {
+        flex-direction: column;
+        
+    }
+
+    .top .background-gradient img
+    {
+        order: -1;
+    }
+
+    section .section-row
+    {
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
+    section .section-row h1
+    {
+        margin-bottom: 1.75rem;
+    }
+
+    footer
+    {
+        height: auto;
+        flex-direction: column;
+        padding: 1rem 0;
+    }
+
+    footer .navbar-brand
+    {
+        order: -2;
+        padding: 2rem 0;
+    }
+
+    footer nav
+    {
+        order: -1;
+    }
+
+    footer .navbar ul
+    {
+        flex-direction: row;
+        padding-bottom: 2rem;
+    }
+}
+
+.btn {
+    margin-left : 1rem;
+}
+
